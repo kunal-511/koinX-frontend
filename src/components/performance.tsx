@@ -15,11 +15,11 @@ function Range({ label, low, high, current }: RangeProps) {
         <span>{label} High</span>
       </div>
       <div className="flex justify-between items-center gap-4">
-        <span className="text-sm font-medium">{low.toLocaleString()}</span>
+        <span className=" ">{low.toLocaleString()}</span>
         <div className="flex-1">
           <ProgressBar value={current} min={low} max={high} />
         </div>
-        <span className="text-sm font-medium">{high.toLocaleString()}</span>
+        <span className="">{high.toLocaleString()}</span>
       </div>
     </div>
   );

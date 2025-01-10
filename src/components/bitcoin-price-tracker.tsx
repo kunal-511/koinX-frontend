@@ -7,6 +7,37 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useEffect, useRef } from "react";
 import { PriceDisplay } from "./price-display";
 
+// Define TradingView types
+declare global {
+  interface Window {
+    TradingView: {
+      widget: new (config: TradingViewConfig) => unknown;
+    };
+  }
+}
+
+interface TradingViewConfig {
+  container_id: string;
+  symbol: string;
+  interval: string;
+  timezone: string;
+  theme: string;
+  style: string;
+  toolbar_bg: string;
+  enable_publishing: boolean;
+  hide_top_toolbar: boolean;
+  hide_legend: boolean;
+  save_image: boolean;
+  height: number;
+  width: string;
+  backgroundColor: string;
+  gridColor: string;
+  time_frames: Array<{
+    text: string;
+    resolution: string;
+  }>;
+}
+
 export default function BitcoinTracker() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -15,8 +46,8 @@ export default function BitcoinTracker() {
     script.src = "https://s3.tradingview.com/tv.js";
     script.async = true;
     script.onload = () => {
-      if (typeof TradingView !== "undefined" && containerRef.current) {
-        new TradingView.widget({
+      if (window.TradingView && containerRef.current) {
+        new window.TradingView.widget({
           container_id: "tradingview-widget",
           symbol: "BITSTAMP:BTCUSD",
           interval: "D",
@@ -28,7 +59,7 @@ export default function BitcoinTracker() {
           hide_top_toolbar: false,
           hide_legend: true,
           save_image: false,
-          height: 400,
+          height: 450,
           width: "100%",
           backgroundColor: "rgba(255, 255, 255, 1)",
           gridColor: "rgba(242, 242, 242, 0.06)",
@@ -57,7 +88,6 @@ export default function BitcoinTracker() {
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
         <span>Cryptocurrencies</span>
         <MdOutlineKeyboardDoubleArrowRight className="h-4 w-4" />
-
         <span className="text-foreground">Bitcoin</span>
       </nav>
 
@@ -94,7 +124,7 @@ export default function BitcoinTracker() {
             <div
               ref={containerRef}
               id="tradingview-widget"
-              className="w-full h-[400px]"
+              className="w-full h-[450px]"
             />
           </div>
         </CardContent>

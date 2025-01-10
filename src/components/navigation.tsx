@@ -10,16 +10,16 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="border-b border-gray-200">
+    <nav className="border-b border-gray-300 mx-6 mb-4 max-w-[66.5rem]">
       <div className="flex space-x-8">
         {links.map((link) => (
           <a
             key={link.label}
             href={link.href}
-            className={`px-1 py-4 text-sm font-medium border-b-2 ${
+            className={`px-1 py-4 text-lg  border-b-2 ${
               link.active
-                ? "border-blue-500 text-blue-500"
-                : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                ? " border-b-[3px] border-[#0052FE] text-[#0141CF]"
+                : "border-transparent text-black  hover:text-gray-700 hover:border-gray-300"
             }`}
           >
             {link.label}

@@ -20,9 +20,8 @@ const App = () => {
           <TrendingCoins />
         </div>
       </div>
-
-      <div className="max-w-[66.5rem] mx-4 rounded-xl bg-white px-4 py-8">
-        <Navigation />
+      <Navigation />
+      <div className="max-w-[66.5rem] mx-4 rounded-lg bg-white px-4 py-8">
         <div className="space-y-8 mt-8">
           <Performance />
           <Fundamentals />

@@ -16,7 +16,7 @@ export default function Tokenomics() {
                 className="w-full h-full rounded-full"
                 style={{
                   background:
-                    "conic-gradient(#FF9500 0% 20%, #007AFF 20% 100%)",
+                    "conic-gradient(#007AFF 0% 70%, #FF9500 30% 100%)",
                 }}
               >
                 <div className="absolute inset-[15%] bg-white rounded-full"></div>
@@ -28,18 +28,16 @@ export default function Tokenomics() {
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-[#007AFF]"></div>
-              <span className="text-sm text-gray-600">
-                Crowdsale investors: 80%
-              </span>
+              <span className="text-sm ">Crowdsale investors: 80%</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-[#FF9500]"></div>
-              <span className="text-sm text-gray-600">Foundation: 20%</span>
+              <span className="text-sm ">Foundation: 20%</span>
             </div>
           </div>
         </div>
 
-        <p className="mt-6 text-sm text-gray-600 leading-relaxed">
+        <p className="mt-6 text-sm  leading-relaxed">
           Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
           vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum
           amet enim sit eget leo amet. At metus orci augue fusce eleifend lectus
