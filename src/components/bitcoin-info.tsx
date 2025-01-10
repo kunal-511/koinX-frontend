@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function BitcoinInfo() {
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-8">
+    <div className="max-w-[66.5rem] mx-4 p-6 space-y-8 bg-white mt-6 rounded-xl">
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">About Bitcoin</h2>
 

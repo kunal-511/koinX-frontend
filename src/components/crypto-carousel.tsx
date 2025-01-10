@@ -30,7 +30,7 @@ export default function CryptoCarousel() {
 
   if (isLoading) {
     return (
-      <div className="space-y-8">
+      <div className="space-y-8  ">
         {[...Array(2)].map((_, i) => (
           <div key={i} className="space-y-4">
             <div className="h-8 w-48 bg-gray-200 rounded animate-pulse" />
@@ -49,7 +49,7 @@ export default function CryptoCarousel() {
   }
 
   return (
-    <div className="space-y-8 py-4">
+    <div className="space-y-8  p-8  overflow-scroll">
       <Carousel title="You May Also Like">
         {coins.map((coin) => (
           <CoinCard key={coin.id} {...coin} />

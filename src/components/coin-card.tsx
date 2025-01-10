@@ -21,7 +21,7 @@ export function CoinCard({
   const isPositive = priceChange >= 0;
 
   return (
-    <Card className="min-w-[250px] max-w-[250px]">
+    <Card className="min-w-[300px] max-w-[250px]">
       <CardContent className="p-4">
         <div className="flex items-center gap-2 mb-2">
           <img

@@ -58,7 +58,7 @@ export default function TrendingCoins() {
           </div>
         ) : (
           <div className="space-y-6">
-            {coins.map((coin) => (
+            {coins.slice(0, 3).map((coin) => (
               <div
                 key={coin.symbol}
                 className="flex items-center justify-between"

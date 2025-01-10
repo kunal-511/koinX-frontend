@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronRight } from "lucide-react";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useEffect, useRef } from "react";
 import { PriceDisplay } from "./price-display";
 
@@ -53,14 +53,15 @@ export default function BitcoinTracker() {
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4">
+    <div className="w-full max-w-6xl mx-auto p-4 ">
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
         <span>Cryptocurrencies</span>
-        <ChevronRight className="h-4 w-4" />
+        <MdOutlineKeyboardDoubleArrowRight className="h-4 w-4" />
+
         <span className="text-foreground">Bitcoin</span>
       </nav>
 
-      <Card>
+      <Card className="h-[110vh]">
         <CardHeader className="space-y-4">
           <div className="flex items-center gap-3 flex-wrap">
             <h1 className="text-2xl font-bold">Bitcoin</h1>
@@ -74,7 +75,7 @@ export default function BitcoinTracker() {
         </CardHeader>
 
         <CardContent>
-          <div className="space-y-4">
+          <div className="space-y-4 h-[90vh]">
             <h2 className="text-xl font-semibold">Bitcoin Price Chart (USD)</h2>
 
             <Tabs defaultValue="7D" className="w-full">

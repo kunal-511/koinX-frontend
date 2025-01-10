@@ -11,17 +11,17 @@ import TrendingCoins from "./components/trending-coins";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-[#D3e0e6]">
       <Navbar />
       <div className="flex">
         <BitcoinTracker />
-        <GetStarted />
+        <div className="flex flex-col space-y-6 mr-8">
+          <GetStarted />
+          <TrendingCoins />
+        </div>
       </div>
-      <TrendingCoins />
-      <div className="container mx-auto px-4">
-        <CryptoCarousel />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 py-8">
+
+      <div className="max-w-[66.5rem] mx-4 rounded-xl bg-white px-4 py-8">
         <Navigation />
         <div className="space-y-8 mt-8">
           <Performance />
@@ -30,6 +30,9 @@ const App = () => {
       </div>
       <BitcoinInfo />
       <Tokenomics />
+      <div className="container   bg-white mt-6">
+        <CryptoCarousel />
+      </div>
     </div>
   );
 };
