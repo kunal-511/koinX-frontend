@@ -1,16 +1,16 @@
 import { useMediaQuery } from "react-responsive";
-import BitcoinInfo from "./components/bitcoin-info";
-import BitcoinTracker from "./components/bitcoin-price-tracker";
-import CryptoCarousel from "./components/crypto-carousel";
-import { Fundamentals } from "./components/fundamentals";
-import GetStarted from "./components/get-started";
+import BitcoinInfo from "./components/About/bitcoin-info";
+import BitcoinTracker from "./components/Bitcoin Price/bitcoin-price-tracker";
+import CryptoCarousel from "./components/Coins Carousel/crypto-carousel";
+import { Fundamentals } from "./components/Overview/fundamentals";
+import GetStarted from "./components/Get Started/get-started";
 import Navbar from "./components/Navbar/Navbar";
-import { Navigation } from "./components/navigation";
-import { Performance } from "./components/performance";
-import SentimentDashboard from "./components/sentiment-dashboard";
-import TeamSection from "./components/team-section";
-import Tokenomics from "./components/tokenomics";
-import TrendingCoins from "./components/trending-coins";
+import { Navigation } from "./components/Overview/navigation";
+import { Performance } from "./components/Overview/performance";
+import SentimentDashboard from "./components/Sentiments/sentiment-dashboard";
+import TeamSection from "./components/Team/team-section";
+import Tokenomics from "./components/Tokenomics/tokenomics";
+import TrendingCoins from "./components/Trending Coins/trending-coins";
 
 const App = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });

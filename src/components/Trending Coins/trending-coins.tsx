@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { getCoinData } from "../actions/get-trending-coins";
+import { getCoinData } from "../../actions/get-trending-coins";
 import { ArrowUp } from "lucide-react";
 
 interface Coin {

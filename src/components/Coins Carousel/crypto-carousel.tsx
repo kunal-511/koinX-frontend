@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getCoinData } from "../actions/get-trending-coins";
+import { getCoinData } from "../../actions/get-trending-coins";
 import { CoinCard } from "./coin-card";
 import { Carousel } from "./carousel";
 
