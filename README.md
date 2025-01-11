@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# KoinX-Frontend 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application built with Vite, TypeScript, and shadcn/ui components using pnpm as the package manager.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/) - A JavaScript library for building user interfaces
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [TypeScript](https://www.typescriptlang.org/) - JavaScript with syntax for types
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built using Radix UI and Tailwind CSS
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
+- [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js (version 22.0.0 or higher)
+- pnpm (version 10.0.0 or higher)
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <project-name>
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Start the development server:
+```bash
+pnpm dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+4. Open [http://localhost:5173](http://localhost:5173) to view the application in your browser.
+
+## Available Scripts
+
+- `pnpm dev` - Starts the development server
+- `pnpm build` - Creates a production build
+- `pnpm preview` - Locally preview the production build
+- `pnpm lint` - Run ESLint
+
+## Project Structure
+
+```
+├── public/              # Static files
+├── src/
+│   ├── components/      # React components
+│   │   └── ui/         # shadcn/ui components
+│   ├── lib/            # Utility functions and hooks
+│   ├── App.tsx         # Root component
+│   └── main.tsx        # Application entry point
+├── .eslintrc.json      # ESLint configuration
+├── .gitignore          # Git ignore rules
+├── index.html          # HTML entry point
+├── package.json        # Project dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+├── tsconfig.json       # TypeScript configuration
+└── vite.config.ts      # Vite configuration
+```
+
+## Adding shadcn/ui Components
+
+To add new shadcn/ui components, use the CLI:
+
+```bash
+pnpm dlx shadcn-ui@latest add <component-name>
+```
+
+Example:
+```bash
+pnpm dlx shadcn-ui@latest add button
 ```
