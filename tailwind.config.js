@@ -19,6 +19,8 @@ export default {
       },
       colors: {
         "custom-blue": "rgba(232, 244, 253, 1)",
+        "custom-green": "rgba(235, 249, 244, 1)",
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { getCoinData } from "../actions/get-trending-coins";
@@ -43,7 +41,7 @@ export default function TrendingCoins() {
   }
 
   return (
-    <Card className="rounded-xl">
+    <Card className="rounded-none   md:rounded-xl">
       <CardHeader>
         <CardTitle className="text-xl font-bold">
           Trending Coins (24h)

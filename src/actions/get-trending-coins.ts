@@ -1,5 +1,3 @@
-'use server'
-
 interface CoinData {
   item: {
     id: string

@@ -1,6 +1,6 @@
 export default function Tokenomics() {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm max-w-[68rem] mt-6 ">
+    <div className="bg-white rounded-lg p-6 shadow-sm max-w-[67.5rem] mt-6 ">
       <h2 className="text-2xl font-bold text-gray-900">Tokenomics</h2>
 
       <div className="mt-4">

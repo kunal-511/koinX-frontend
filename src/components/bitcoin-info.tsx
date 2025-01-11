@@ -1,12 +1,10 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function BitcoinInfo() {
   return (
-    <div className="w-full max-w-[68rem]  px-4 md:px-6 py-4 md:py-6 space-y-6 md:space-y-8 bg-white mt-6 rounded-lg">
+    <div className="w-full max-w-[67.5rem]  px-4 md:px-6 py-4 md:py-6 space-y-6 md:space-y-8 bg-white mt-6 rounded-lg">
       <section className="space-y-4">
         <h2 className="text-2xl md:text-3xl font-bold">About Bitcoin</h2>
 

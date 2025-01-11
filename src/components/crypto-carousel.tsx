@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { getCoinData } from "../actions/get-trending-coins";
 import { CoinCard } from "./coin-card";
@@ -30,7 +28,7 @@ export default function CryptoCarousel() {
 
   if (isLoading) {
     return (
-      <div className="space-y-6 md:space-y-8 py-3 md:py-4">
+      <div className="space-y-6 md:space-y-8 py-3 md:py-4 ">
         {[...Array(2)].map((_, i) => (
           <div key={i} className="space-y-3 md:space-y-4">
             <div className="h-7 md:h-8 w-40 md:w-48 bg-gray-200 rounded animate-pulse" />

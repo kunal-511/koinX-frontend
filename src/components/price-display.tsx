@@ -1,5 +1,3 @@
-"use client";
-
 import { Badge } from "@/components/ui/badge";
 import { CoinGeckoResponse } from "@/lib/types";
 import { formatCurrency, formatPercentage } from "@/lib/formats";
