@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function GetStarted() {
   return (
-    <div className="flex flex-col items-center text-center p-8 md:p-12 bg-[#0052FE] text-white rounded-2xl max-w-xl mx-auto mt-[3.3rem] h-[85vh]">
+    <div className="flex flex-col items-center text-center p-8 md:p-12 bg-[#0052FE] text-white rounded-xl max-w-xl mx-auto mt-[2.55rem] h-[85vh]">
       <h2 className="text-2xl md:text-3xl font-bold mb-4">
         Get Started with KoinX for FREE
       </h2>

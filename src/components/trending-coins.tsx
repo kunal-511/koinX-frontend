@@ -43,7 +43,7 @@ export default function TrendingCoins() {
   }
 
   return (
-    <Card>
+    <Card className="rounded-xl">
       <CardHeader>
         <CardTitle className="text-xl font-bold">
           Trending Coins (24h)

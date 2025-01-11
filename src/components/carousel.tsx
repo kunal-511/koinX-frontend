@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,19 +21,19 @@ export function Carousel({ title, children }: CarouselProps) {
   };
 
   return (
-    <div className="w-full">
-      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+    <div className="w-full px-4 md:px-0">
+      <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{title}</h2>
       <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth"
+          className="flex gap-3 md:gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
         >
           {children}
         </div>
         <Button
           variant="outline"
           size="icon"
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg"
+          className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white rounded-full shadow-lg"
           onClick={() => scroll("left")}
         >
           <ChevronLeft className="h-4 w-4" />
@@ -43,7 +41,7 @@ export function Carousel({ title, children }: CarouselProps) {
         <Button
           variant="outline"
           size="icon"
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full shadow-lg"
+          className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white rounded-full shadow-lg"
           onClick={() => scroll("right")}
         >
           <ChevronRight className="h-4 w-4" />

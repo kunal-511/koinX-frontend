@@ -7,7 +7,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { useEffect, useRef } from "react";
 import { PriceDisplay } from "./price-display";
 
-// Define TradingView types
+// TradingView types remain the same
 declare global {
   interface Window {
     TradingView: {
@@ -53,13 +53,13 @@ export default function BitcoinTracker() {
           interval: "D",
           timezone: "exchange",
           theme: "light",
-          style: "1",
-          toolbar_bg: "#f1f5f9",
+          style: "3", // Changed to line chart style
+          toolbar_bg: "#ffffff",
           enable_publishing: false,
-          hide_top_toolbar: false,
+          hide_top_toolbar: true, // Hide top toolbar for cleaner look
           hide_legend: true,
           save_image: false,
-          height: 450,
+          height: 400,
           width: "100%",
           backgroundColor: "rgba(255, 255, 255, 1)",
           gridColor: "rgba(242, 242, 242, 0.06)",
@@ -84,18 +84,20 @@ export default function BitcoinTracker() {
   }, []);
 
   return (
-    <div className="w-full max-w-6xl mx-auto p-4 ">
+    <div className="w-full max-w-6xl mx-auto px-4 py-2 h-full ">
       <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
         <span>Cryptocurrencies</span>
         <MdOutlineKeyboardDoubleArrowRight className="h-4 w-4" />
         <span className="text-foreground">Bitcoin</span>
       </nav>
 
-      <Card className="h-[110vh]">
-        <CardHeader className="space-y-4">
+      <Card className="shadow-none border-0 sm:border">
+        <CardHeader className="space-y-4 p-0 sm:p-6">
           <div className="flex items-center gap-3 flex-wrap">
-            <h1 className="text-2xl font-bold">Bitcoin</h1>
-            <span className="text-xl text-muted-foreground">BTC</span>
+            <div className="flex items-center gap-2">
+              <h1 className="text-2xl font-semibold">Bitcoin</h1>
+              <span className="text-xl text-muted-foreground">BTC</span>
+            </div>
             <Badge variant="secondary" className="h-6">
               Rank #1
             </Badge>
@@ -104,28 +106,35 @@ export default function BitcoinTracker() {
           <PriceDisplay />
         </CardHeader>
 
-        <CardContent>
-          <div className="space-y-4 h-[90vh]">
-            <h2 className="text-xl font-semibold">Bitcoin Price Chart (USD)</h2>
+        <CardContent className="p-0 sm:p-6">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold px-4 sm:px-0">
+              Bitcoin Price Chart (USD)
+            </h2>
 
             <Tabs defaultValue="7D" className="w-full">
-              <TabsList className="grid grid-cols-4 md:grid-cols-8 gap-2">
-                <TabsTrigger value="1H">1H</TabsTrigger>
-                <TabsTrigger value="24H">24H</TabsTrigger>
-                <TabsTrigger value="7D">7D</TabsTrigger>
-                <TabsTrigger value="1M">1M</TabsTrigger>
-                <TabsTrigger value="3M">3M</TabsTrigger>
-                <TabsTrigger value="6M">6M</TabsTrigger>
-                <TabsTrigger value="1Y">1Y</TabsTrigger>
-                <TabsTrigger value="ALL">ALL</TabsTrigger>
+              <TabsList className="w-full h-auto flex justify-start gap-2 p-2 bg-transparent mb-4 overflow-x-auto">
+                {["1H", "24H", "7D", "1M", "3M", "6M", "1Y", "ALL"].map(
+                  (period) => (
+                    <TabsTrigger
+                      key={period}
+                      value={period}
+                      className="px-4 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                    >
+                      {period}
+                    </TabsTrigger>
+                  )
+                )}
               </TabsList>
             </Tabs>
 
-            <div
-              ref={containerRef}
-              id="tradingview-widget"
-              className="w-full h-[450px]"
-            />
+            <div className="w-full h-[400px] relative">
+              <div
+                ref={containerRef}
+                id="tradingview-widget"
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </CardContent>
       </Card>

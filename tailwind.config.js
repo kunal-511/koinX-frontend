@@ -12,13 +12,13 @@ export default {
         "custom-1":
           "linear-gradient(90deg, #FF4949 0%, #FF4E11 15.34%, #FC870A 30.45%, #FFAF11 48.68%, #C2CB21 62.75%, #11EB68 100.03%)",
       },
-
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        "custom-blue": "rgba(232, 244, 253, 1)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

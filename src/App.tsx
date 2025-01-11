@@ -6,30 +6,39 @@ import GetStarted from "./components/get-started";
 import Navbar from "./components/Navbar";
 import { Navigation } from "./components/navigation";
 import { Performance } from "./components/performance";
+import SentimentDashboard from "./components/sentiment-dashboard";
+import TeamSection from "./components/team-section";
 import Tokenomics from "./components/tokenomics";
 import TrendingCoins from "./components/trending-coins";
 
 const App = () => {
   return (
-    <div className="bg-[#D3e0e6]">
+    <div className="bg-[#D3E0E6] ">
       <Navbar />
-      <div className="flex">
-        <BitcoinTracker />
-        <div className="flex flex-col space-y-6 mr-8">
-          <GetStarted />
-          <TrendingCoins />
+
+      <div className="px-4">
+        <div className="flex gap-4 h-full  ">
+          <BitcoinTracker />
+          <div className="flex flex-col  space-y-6 ">
+            <GetStarted />
+            <TrendingCoins />
+          </div>
         </div>
-      </div>
-      <Navigation />
-      <div className="max-w-[66.5rem] mx-4 rounded-lg bg-white px-4 py-8">
-        <div className="space-y-8 mt-8">
-          <Performance />
-          <Fundamentals />
+        <div className="min-h-screen max-w-[68rem] rounded-lg  bg-white mt-6 px-6">
+          <div className="max-w-5xl  py-4 md:py-8 overflow-hidden">
+            <Navigation />
+            <div className="space-y-6 md:space-y-8 mt-6 md:mt-8">
+              <Performance />
+              <Fundamentals />
+            </div>
+          </div>
         </div>
+        <SentimentDashboard />
+        <BitcoinInfo />
+        <Tokenomics />
+        <TeamSection />
       </div>
-      <BitcoinInfo />
-      <Tokenomics />
-      <div className="container   bg-white mt-6">
+      <div className="container p-6  bg-white mt-6">
         <CryptoCarousel />
       </div>
     </div>

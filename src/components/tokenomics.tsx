@@ -1,12 +1,10 @@
 export default function Tokenomics() {
   return (
-    <div className="bg-white rounded-lg p-6 shadow-sm max-w-[66.5rem] mt-6 mx-4">
-      <h2 className="text-xl font-semibold text-gray-900">Tokenomics</h2>
+    <div className="bg-white rounded-lg p-6 shadow-sm max-w-[68rem] mt-6 ">
+      <h2 className="text-2xl font-bold text-gray-900">Tokenomics</h2>
 
       <div className="mt-4">
-        <h3 className="text-base font-medium text-gray-700">
-          Initial Distribution
-        </h3>
+        <h3 className="text-lg  font-medium ">Initial Distribution</h3>
 
         <div className="mt-6 flex flex-col md:flex-row items-center gap-8">
           {/* Donut Chart */}

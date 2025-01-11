@@ -10,15 +10,15 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="border-b border-gray-300 mx-6 mb-4 max-w-[66.5rem]">
-      <div className="flex space-x-8">
+    <nav className="border-b border-gray-300 overflow-x-auto  scrollbar-none">
+      <div className="flex space-x-6 md:space-x-8 min-w-max px-4 md:px-0 ">
         {links.map((link) => (
           <a
             key={link.label}
             href={link.href}
-            className={`px-1 py-4 text-lg  border-b-2 ${
+            className={`px-1 py-3 md:py-4 text-sm font-medium border-b-2 whitespace-nowrap ${
               link.active
-                ? " border-b-[3px] border-[#0052FE] text-[#0141CF]"
+                ? "border-b-[3px] border-[#0052FE] text-[#0141CF]"
                 : "border-transparent text-black  hover:text-gray-700 hover:border-gray-300"
             }`}
           >

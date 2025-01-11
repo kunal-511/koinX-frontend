@@ -29,7 +29,7 @@ export function PriceDisplay() {
     }
 
     fetchPrice();
-    const interval = setInterval(fetchPrice, 60000); // Update every minute
+    const interval = setInterval(fetchPrice, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -51,25 +51,27 @@ export function PriceDisplay() {
   const { usd, inr, usd_24h_change } = priceData.bitcoin;
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-2">
       <div className="flex items-center gap-3 flex-wrap">
-        <span className="text-3xl font-bold">{formatCurrency(usd, "USD")}</span>
+        <span className="text-2xl sm:text-3xl font-bold tracking-tight">
+          {formatCurrency(usd, "USD")}
+        </span>
         <Badge
           variant={usd_24h_change >= 0 ? "success" : "destructive"}
-          className="h-6"
+          className="h-6 bg-transparent border-0"
         >
           <span
             className={
               usd_24h_change >= 0 ? "text-emerald-600" : "text-destructive"
             }
           >
-            {usd_24h_change >= 0 ? "↑" : "↓"}{" "}
+            {usd_24h_change >= 0 ? "▲" : "▼"}{" "}
             {formatPercentage(Math.abs(usd_24h_change))}
           </span>
           <span className="text-muted-foreground ml-1">(24H)</span>
         </Badge>
       </div>
-      <p className="text-lg text-muted-foreground">
+      <p className="text-base sm:text-lg text-muted-foreground">
         {formatCurrency(inr, "INR")}
       </p>
     </div>
