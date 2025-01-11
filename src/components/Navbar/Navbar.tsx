@@ -4,8 +4,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
-      <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+    <header className="sticky top-0 z-50 w-full border-b ">
+      <div className="container flex h-16 items-center justify-between px-4 md:px-6 ">
         <a href="/" className="flex items-center space-x-2">
           <img
             src="logo.svg"
@@ -16,7 +16,7 @@ export default function Navbar() {
           />
         </a>
 
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden items-center gap-6 md:flex ">
           <a
             href="/crypto-taxes"
             className="text-sm font-medium text-gray-800 hover:text-gray-600"
